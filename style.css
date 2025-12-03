@@ -1,0 +1,336 @@
+/* style.css */
+
+/* VARIÁVEIS DE COR E FONTES */
+:root {
+    --discord-purple: #5865f2;
+    --discord-dark: #23272a;
+    --white: #fff;
+    --gray-bg: #f6f6f6;
+    --black: #000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--discord-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ESTILOS DE BOTÃO REUTILIZÁVEIS */
+.btn {
+    border: none;
+    border-radius: 40px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.btn-large {
+    padding: 16px 32px;
+    font-size: 20px;
+}
+
+.btn-download {
+    background-color: var(--black);
+    color: var(--white);
+    margin-right: 20px;
+}
+
+.btn-download:hover {
+    background-color: #333;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.btn-browser {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.btn-browser:hover {
+    color: var(--discord-purple);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* 1. HEADER */
+header {
+    background-color: var(--discord-purple);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+header nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: text-decoration 0.2s;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* O botão do header é branco */
+header .btn-small {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/* 2. HERO SECTION */
+.hero-section {
+    background-color: var(--discord-purple);
+    color: var(--white);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Importante para responsividade */
+    gap: 20px;
+}
+
+/* 3. FEATURE SECTIONS */
+.feature-section {
+    padding: 120px 0;
+}
+
+.odd-background {
+    background-color: var(--gray-bg);
+}
+
+.content-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.content-text {
+    flex-basis: 50%; /* Define a largura da coluna de texto no desktop */
+}
+
+.content-image {
+    flex-basis: 50%; /* Define a largura da coluna de imagem no desktop */
+    min-height: 350px; /* Altura de placeholder */
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #555;
+}
+
+.content-row h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--discord-dark);
+}
+
+.content-row p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* FEATURE SECTION ALTERNADA (Image Left) */
+.reverse-row {
+    flex-direction: row-reverse;
+}
+
+/* 4. FINAL CTA SECTION */
+.cta-section {
+    padding: 120px 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: var(--discord-dark);
+}
+
+.cta-section p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-image {
+    width: 100%;
+    min-height: 300px;
+    background-color: #ddd;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.final-download {
+    background-color: var(--discord-purple);
+    color: var(--white);
+}
+
+.final-download:hover {
+    background-color: #6a74ed;
+}
+
+/* 5. FOOTER */
+footer {
+    background-color: var(--discord-dark);
+    padding: 40px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--discord-purple);
+}
+
+footer .logo {
+    color: var(--discord-purple);
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.btn-register {
+    background-color: var(--discord-purple);
+    color: var(--white);
+}
+
+.btn-register:hover {
+    background-color: #6a74ed;
+}
+
+/* ========================================= */
+/* RESPONSIVIDADE (MEDIA QUERIES)      */
+/* ========================================= */
+
+/* Quebra de tela para TABLETS e CELULARES menores que 992px */
+@media (max-width: 992px) {
+    
+    /* HEADER */
+    header {
+        padding: 15px 20px;
+    }
+
+    header nav {
+        display: none; /* Oculta os links do menu em telas menores */
+    }
+
+    /* HERO */
+    .hero-content h1 {
+        font-size: 48px;
+    }
+    .hero-content p {
+        font-size: 18px;
+    }
+    
+    /* FEATURE SECTIONS - PRINCIPAL AJUSTE DE RESPONSIVIDADE */
+    .feature-section {
+        padding: 80px 0;
+    }
+    
+    .content-row {
+        /* Muda a direção do Flexbox para empilhar o conteúdo verticalmente */
+        flex-direction: column !important; 
+        text-align: center;
+        gap: 40px;
+    }
+
+    .content-image, .content-text {
+        flex-basis: 100%; /* Ocupa a largura total */
+    }
+
+    .content-row h2 {
+        font-size: 36px;
+    }
+
+    /* FINAL CTA */
+    .cta-section h2 {
+        font-size: 30px;
+    }
+
+    .cta-image {
+        min-height: 250px;
+    }
+}
+
+/* Quebra de tela para CELULARES menores que 576px */
+@media (max-width: 576px) {
+    
+    /* HERO */
+    .hero-buttons {
+        /* Empilha os botões do Hero */
+        flex-direction: column;
+    }
+
+    .btn-large {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+
+    /* HEADER */
+    header {
+        justify-content: space-around;
+    }
+    
+    /* FOOTER */
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-bottom .btn-register {
+        width: 100%;
+    }
+}
